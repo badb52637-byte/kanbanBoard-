@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kanban Board</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Kanban Task Manager</h1>
+
+<div class="board">
+
+    <div class="column" id="todo">
+        <h2>To Do</h2>
+        <div class="task-list" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <input type="text" placeholder="New task..." id="todo-input">
+        <button onclick="addTask('todo')">Add</button>
+    </div>
+
+    <div class="column" id="inprogress">
+        <h2>In Progress</h2>
+        <div class="task-list" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <input type="text" placeholder="New task..." id="inprogress-input">
+        <button onclick="addTask('inprogress')">Add</button>
+    </div>
+
+    <div class="column" id="done">
+        <h2>Done</h2>
+        <div class="task-list" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <input type="text" placeholder="New task..." id="done-input">
+        <button onclick="addTask('done')">Add</button>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
